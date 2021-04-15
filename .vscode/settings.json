@@ -1,0 +1,4 @@
+{
+    "lightningLinter.useSfdx": true,
+    "heroku-vscode.applicationName": "thefirstapp13"
+}

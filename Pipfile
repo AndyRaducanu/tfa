@@ -8,6 +8,7 @@ django = "*"
 django-allauth = "*"
 sorl-thumbnail = "*"
 pillow = "*"
+heroku = "*"
 
 [dev-packages]
 
