@@ -4,6 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from sorl.thumbnail import ImageField
 
+
 class Profile(models.Model):
     user = models.OneToOneField(
         User,
@@ -16,9 +17,8 @@ class Profile(models.Model):
         return self.user.username
 
 
-
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
-    """Create a new Profile() object when a Django User si created."""
+    """Create a new Profile() object when a Django User is created."""
     if created:
         Profile.objects.create(user=instance)
